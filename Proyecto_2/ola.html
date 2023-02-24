@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Foro de discusión</title>
+</head>
+
+<body>
+    <script src="JS/scripts.js"></script>
+    <h1>Foro de discusión</h1>
+
+    <div class="container">
+        <h2>Discusión</h2>
+        <div class="comment">
+            <h3>Escribre el tema de discusión: Gestores Web. </h3>
+        </div>
+        <div id="comments">
+			<div class="comment">
+				<p>Hola!:D, soy nuevo en esto de la programación de Aplicaiones Web, y me dejaron de tarea investogar que son los gestores web, he buscado en diferentes fuentes de informacion y sinceramente no encuentro nada sobre el tema. Así que decidí apolicar la clásica y recurrir a algún foro sobre el tema.
+                    Espero puedan ayudarme:c</p>
+			</div>
+            <div id="comments">
+                <div class="comment">
+                    <p>            Un gestor de contenidos o CMS (del inglés, Content Management System) es una aplicación web que permite crear, administrar y publicar una página web en Internet sin necesidad de tener conocimientos de programación.
+
+                        Estas aplicaciones tienen un panel de administración (interfaz) que te permiten crear, editar o publicar contenido web.
+                        
+                        Para facilitar la creación y gestión de las páginas web, los gestores de contenido normalmente poseen plugins, extensiones o complementos que permiten añadir o modificar funcionalidades de tu sitio.
+                        
+                        Inicialmente los gestores de contenidos o CMS nacieron para facilitarles un poco el trabajo a los webmasters, pero han avanzado tanto en los últimos años que ahora casi cualquier persona es capaz de montar su propia web sin tener que externalizar el servicio o contratar a un profesional.
+                        <br><br>
+                        Los tipos de gestores de contenidos son los siguientes:
+                        <ul>
+                            <li>Blogs</li>
+                            <li>Páginas corporativas</li>
+                            <li>Tiendas online o ecommerce</li>
+                            <li>Sitios de e-learning</li>
+                            <li>Foros</li>
+                            <li>Wikis</li>
+                        </ul></p>
+                </div>
+                <div id="comments">
+                    <div class="comment">
+                        <p>Concuerdo, aparte que pues igual depende el tema en específico, porque puede ser para empresas
+                            cosas de ventas como el e-comerce y demás, no solo agarrarás una y ahí a lo loco verdad?, si planeas hacer algo con eso, investiga bien que es lo que harás y dependiendo de ello, verás que tipo de gestor te conviene más.
+                            <br><br>
+                            Y si, irónicamente recurriste a un gestor web para resolver tu duda sobre los gestores webs xd.</p>
+                    </div>
+        <br>
+        <div id="comments">
+        </div>
+        <br>
+        <form>
+            <label for="comment">Agregar comentario:</label><br><br><br>
+            <textarea id="comment" name="comment" rows="5" cols="50"></textarea><br><br>
+            <button type="button" onclick="agregarComentario()">Publicar</button>
+        </form>
+    </div>
+    <script>
+        function agregarComentario() {
+            var comentario = document.getElementById("comment").value;
+            var div = document.createElement("div");
+            div.className = "comment";
+            div.innerHTML = "<p>" + comentario + "</p>";
+            document.getElementById("comments").appendChild(div);
+        }
+    </script>
+</body>
+
+</html>
